@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3be15279db5f4939b2fa339c11928241" Name="关系图1">
+        <EntityTypeShape EntityType="Zeje.SysModel.SysMenu" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysMenuHOperation" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysOperation" Width="1.5" PointX="0.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysOrg" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysPerson" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysRole" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysRoleHOperation" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysRoleHPerson" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysRoleVOrg" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysRoleVPerson" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zeje.SysModel.SysRoleVRole" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysMenuHOperation_SysMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleHOperation_SysMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysMenuHOperation_SysOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleHOperation_SysOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleVOrg_SysOrg" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleHPerson_SysPerson" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleVPerson_SysPerson" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleHOperation_SysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleHPerson_SysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleVOrg_SysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleVPerson_SysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="Zeje.SysModel.FK_SysRoleVRole_SysRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,79 @@
+﻿body {
+    font: 14px/1.5 Microsoft yahei,Arial, Helvetica;
+    color: #666;
+}
+
+.noscript {
+    position: absolute;
+    z-index: 100000;
+    height: 2046px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    text-align: center;
+}
+
+.layoutnorth {
+    overflow: hidden;
+    font-family: 微软雅黑,黑体;
+}
+    /*fix*/
+    .layoutnorth .panel-header {
+        height: 30px !important;
+        vertical-align: central;
+    }
+
+
+#northWelcome {
+    left: 10px;
+    height: 30px;
+    font-size: 14px;
+}
+
+#northFunction {
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    width: auto;
+}
+
+.layoutwest {
+    width: 180px;
+}
+
+.layoutcenter {
+    background: #eee;
+    overflow-y: hidden;
+}
+
+.layoutsouth {
+    text-align: center;
+    height: 30px;
+    line-height:28px;
+}
+    .layoutsouth .inner {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+.easyui-tree li {
+    margin: 5px 0px 0px 0px;
+    padding: 1px;
+}
+
+
+
+
+a.v1:visited, a.v1:active, a.v1:link {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
+
+a.v1:hover {
+    font-size: 14px;
+    color: #005500;
+    text-decoration: none;
+}

@@ -1,0 +1,182 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ output extension=".cs" #>
+
+<# 
+    AutoDictManager manager = new AutoDictManager();
+    List<AutoDict> lstAutoDict= manager.GetList();
+    IEnumerable<IGrouping<string, AutoDict>> lst =  manager.GetlstGroup(lstAutoDict);
+#>
+using System.ComponentModel;
+
+namespace Zeje.Common
+{
+<#
+foreach(var grp in lst)
+{
+#>
+    /// <summary><#= manager.GetDictTypeName(lstAutoDict,grp.Key) #>
+    /// </summary>
+    public enum <#=grp.Key #>
+    {
+    <#
+    foreach (var item in grp)
+    {
+    #>    /// <summary><#=item.DictName#>:<#= item.DictValue #>
+        /// </summary>
+        [Sort(<#=item.DictOrder#>)]
+        [Description("<#=item.DictName#>")]
+        <#= item.DictKey #> = <#= item.DictValue #> ,
+    <#
+    }
+    #>
+}
+<#
+}#>
+}
+
+<#+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AutoDictGroup
+    {
+        public string DictTypeKey { get; set; }
+        public string DictTypeName { get; set; }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AutoDict
+    {
+        public string DictTypeKey { get; set; }
+        public string DictTypeName { get; set; }
+        public string DictKey { get; set; }
+        public string DictName { get; set; }
+        public int? DictValue { get; set; }
+        public string DictOrder { get; set; }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public class AutoDictManager
+    {
+        /// <summary>
+        /// 数据库连接字符串
+        /// </summary>
+        private const string strConnectionString = "server=localhost;database=Zeje.Sys;uid=sa;pwd=123456;";
+        /// <summary>
+        /// 字典表数据
+        /// </summary>
+        private const string strDictSQL = @"SELECT * FROM [dbo].[SysDict]";
+
+        /// <summary>
+        /// 获得数据连接
+        /// </summary>
+        /// <returns></returns>
+        private SqlConnection GetConnection()
+        {
+            return new SqlConnection(strConnectionString);
+        }
+        /// <summary>
+        /// 释放连接
+        /// </summary>
+        /// <param name="con"></param>
+        private void ReleaseConnection(SqlConnection con)
+        {
+            if (con != null)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        /// <summary>获得字典数据
+        /// </summary>
+        public DataTable GetDictData()
+        {
+            DataTable dt;
+            using (SqlConnection con = GetConnection())
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = strDictSQL;
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dt = ds.Tables[0];
+            }
+
+            return dt;
+        }
+        /// <summary>
+        /// </summary>
+        public List<AutoDict> GetList()
+        {
+            DataTable table = GetDictData();
+            List<AutoDict> lstAutoDict = new List<AutoDict>();
+            if (table != null && table.Rows.Count > 0)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    AutoDict model = new AutoDict();
+                    model.DictKey = row["DictKey"].ToString();
+                    model.DictName = row["DictName"].ToString();
+                    model.DictOrder = row["DictOrder"].ToString();
+                    model.DictTypeKey = row["DictTypeKey"].ToString();
+                    model.DictTypeName = row["DictTypeName"].ToString();
+                    model.DictValue = row["DictValue"] as int?;
+                    lstAutoDict.Add(model);
+                }
+            }
+            return lstAutoDict;
+        }
+
+        public IEnumerable<IGrouping<string, AutoDict>> GetlstGroup(List<AutoDict> lst)
+        {
+            //return lst.GroupBy(it => new AutoDictGroup
+            //{
+            //    DictTypeKey = it.DictTypeKey,
+            //    DictTypeName = it.DictTypeName
+            //});
+            return lst.GroupBy(it => it.DictTypeKey);
+        }
+
+        public string GetDictTypeName(List<AutoDict> lst, string key)
+        {
+            return lst.Where(it => it.DictTypeKey == key).Select(it => it.DictTypeName).Distinct().SingleOrDefault();
+        }
+       
+        public void Show()
+        {
+            List<AutoDict> lstAutoDict = GetList();
+            var lst = GetlstGroup(lstAutoDict);
+            foreach (var grp in lst)
+            {
+                Console.WriteLine("/// <summary>" + grp.Key);
+                Console.WriteLine("/// </summary>");
+                Console.WriteLine("public enum " + grp.Key);
+                Console.WriteLine("{");
+                foreach (var item in grp)
+                {
+                    Console.WriteLine("/// <summary>" + item.DictName);
+                    Console.WriteLine("/// </summary>");
+                    Console.WriteLine("{0} = {1}", item.DictKey, item.DictValue);
+                    var dn = item.DictName;
+                }
+            }
+        }
+    }
+ #>
+

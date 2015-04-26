@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1 style="margin: 0px; padding: 0px; border: 0px; font-style: normal; z-index: 999; position: relative; font-weight: normal; font-size: 28px; font-family: 微软雅黑, 黑体; line-height: 36px; color: rgb(0, 0, 0); font-variant: normal; letter-spacing: normal; orphans: auto; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;">C#箴言：定义常量的两种方法</h1>
+    在<a class="keyword_link" href="http://product.yesky.com/product/225/225032/" target="_blank">C</a>#中定义常量的方式有两种，一种叫做静态常量（Compile-time constant），另一种叫做动态常量（Runtime constant）。前者用“const”来定义，后者用“readonly”来定义。
+    <br>
+    <br>
+    对于静态常量（Compile-time constant），它的书写方式如下：<br>
+    <br>
+    public const int MAX_VALUE = 10;<br>
+    <br>
+    为什么称它为静态常量呢，因为如上声明可以按照如下理解（注意：如下书写是错误的，会出编译错误，这里只是为了方便说明）。<br>
+    <br>
+    public static const int MAX_VALUE = 10;<br>
+    <br>
+    用const定义的常量，对于所有类对象而言都是一样的，因此需要像访问静态成员那样去访问const定义的常量，而用对象的成员方式去访问会出变异错误。此外，对于静态常量的访问在编译的时候，是用常量的值去替换常量，例如：<br>
+    <br>
+    int nValue = MAX_VALUE;<br>
+    <br>
+    这句在编译之后，和如下这句所产生的中间语言代码是一样的。<br>
+    <br>
+    int nValue = 10;<br>
+    <br>
+    不过，在用const来定义常量的时候，在类型上有很多限制。首先，此类型必须属于值类型，同时此类型的初始化不能通过new来完成，因此一些用struct定义的值类型常量也不能用const来定义。<br>
+    <br>
+    相对于const而言，用readonly来定义常量要灵活的多，它的书写方式如下：<br>
+    <br>
+    public readonly int MAX_VALUE = 10;<br>
+    <br>
+    为什么称为动态变量，因为系统要为readonly所定义的常量分配空间，即和类的其他成员一样拥有独立的空间。此外，readonly所定义的常量除了在定义的时候可以设定常量值外，还可以在类的构造函数中进行设定。由于readonly所定义的常量相当于类的成员，因此使用const来定义常量所受到的类型限制，在使用readonly去定义的时候全部消失，即可以用readonly去定义任何类型的常量。<br>
+    <br>
+    综合上面所述，至于对比两者之间的区别具体如下。<br>
+    <br>
+    <table cellspacing="0" cellpadding="0" width="90%" align="center" border="1">
+        <tbody>
+            <tr>
+                <td width="13%">&nbsp;</td>
+                <td width="41%">静态常量（Compile-time constant）</td>
+                <td width="46%">动态常量（Runtime constant）</td>
+            </tr>
+            <tr>
+                <td>定义</td>
+                <td>声明的同时要设置常量值。</td>
+                <td>声明的时候可以不需要进行设置常量值，可以在类的构造函数中进行设置。</td>
+            </tr>
+            <tr>
+                <td>类型限制</td>
+                <td>首先类型必须属于值类型范围，且其值不能通过new来进行设置。</td>
+                <td>没有限制，可以用它定义任何类型的常量。</td>
+            </tr>
+            <tr>
+                <td>对于类对象而言</td>
+                <td>对于所有类的对象而言，常量的值是一样的。</td>
+                <td>对于类的不同对象而言，常量的值可以是不一样的。</td>
+            </tr>
+            <tr>
+                <td>内存消耗</td>
+                <td>无。</td>
+                <td>要分配内存，保存常量实体。</td>
+            </tr>
+            <tr>
+                <td>综述</td>
+                <td>性能要略高，无内存开销，但是限制颇多，不灵活。</td>
+                <td>灵活，方便，但是性能略低，且有内存开销。</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    对于在定义常量的时候，到底是用const来定义还是readonly来定义，我以前为了追求性能，因此尽量用const来定义。但是在此书中，提到了一个关于使用const会产生潜在的bug。就是在程序中使用DLL类库某个类的静态常量时，如果在类库中修改静态常量的值，其它接口没有发生变化，一般来说，程序调用端是不需要重新编译，直接执行就可以调用新的类库。不过就是在此情况下，会产生潜在的bug。这是由于静态常量在编译的时候，是用它的值去替换常量，因此在调用端的程序也是这样进行替换的。<br>
+    <br>
+    例如：在类库中定义了一个静态常量，如下：<br>
+    <br>
+    <table bordercolor="#cccccc" width="90%" align="center" bgcolor="#e1e1e1" border="1">
+        <tbody>
+            <tr>
+                <td>public const int MAX_VALUE = 10;</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    那么对于程序中调用此静态常量这段代码，在编译后产生的中间语言代码中，是用10来进行替换，即使用静态常量的地方，改为10了。<br>
+    <br>
+    那么当类库的静态变量发生变化后，例如：<br>
+    <br>
+    <table bordercolor="#cccccc" width="90%" align="center" bgcolor="#e1e1e1" border="1">
+        <tbody>
+            <tr>
+                <td>public const int MAX_VALUE = 15;</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    那么对于调用端程序是可以在没有重新编译的情况下进行运行，不过此时程序的中间语言代码对应于静态变量的值是10，而不是新类库中的15。因此这样产生的不一致，程序会引发潜在的bug。解决此类问题的方法，就是调用端程序在更新类库之后重新编译一下，即生成新的中间语言代码。<br>
+    <br>
+    对于如上在const定义常量时所存在的潜在bug，在用readonly定义常量时是不会发生的。因为readonly定义的常量类似于类的成员，因此在访问的时候需要根据具体常量地址来访问，从而避免此类bug。<br>
+    <br>
+    鉴于此，本书建议用readonly来替换const去定义常量。<br>
+</body>
+</html>
