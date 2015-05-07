@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Zeje.Static")]
-[assembly: AssemblyCopyright("版权所有(C) Microsoft 2014")]
+[assembly: AssemblyCopyright("版权所有(C) Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于 typelib 的 ID
-[assembly: Guid("e48404dc-c210-4d5f-aa20-f887c9de3146")]
+[assembly: Guid("03cfabca-f047-408b-8eeb-72b9cab71900")]
 
 // 程序集的版本信息由下列四个值组成:
 //
