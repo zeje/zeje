@@ -1,0 +1,14 @@
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.Core.dll
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.Core.pdb
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\log4net.dll
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\log4net.xml
+F:\MyVS\Zeje\Zeje.Core\obj\Debug\Zeje.Core.csprojResolveAssemblyReference.cache
+F:\MyVS\Zeje\Zeje.Core\obj\Debug\Zeje.Core.dll
+F:\MyVS\Zeje\Zeje.Core\obj\Debug\Zeje.Core.pdb
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.Utils.dll
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.dll
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Newtonsoft.Json.dll
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.Utils.pdb
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.pdb
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Newtonsoft.Json.xml
+F:\MyVS\Zeje\Zeje.Core\bin\Debug\Zeje.Utils.xml

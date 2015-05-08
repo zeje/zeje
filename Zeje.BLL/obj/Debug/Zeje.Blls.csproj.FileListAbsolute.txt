@@ -1,0 +1,11 @@
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\Zeje.Blls.dll.config
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\Zeje.Blls.dll
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\Zeje.Blls.pdb
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\EntityFramework.dll
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\EntityFramework.Extended.dll
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\EntityFramework.SqlServer.dll
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\EntityFramework.xml
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\EntityFramework.Extended.xml
+E:\JCProject\Projects\Zeje\Zeje.Blls\bin\Debug\EntityFramework.SqlServer.xml
+E:\JCProject\Projects\Zeje\Zeje.Blls\obj\Debug\Zeje.Blls.dll
+E:\JCProject\Projects\Zeje\Zeje.Blls\obj\Debug\Zeje.Blls.pdb

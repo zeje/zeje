@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zeje.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Zeje.Common.SortAttribute">
+            <summary>排序
+            </summary>
+        </member>
+        <member name="M:Zeje.Common.SortAttribute.#ctor(System.Int32)">
+            <summary>构造函数
+            </summary>
+            <param name="p_Sort"></param>
+        </member>
+        <member name="M:Zeje.Common.SortAttribute.GetSort">
+            <summary>获得排序号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zeje.Common.SortAttribute.Get(System.Type,System.String)">
+            <summary>获得排序号
+            </summary>
+            <param name="tp"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Zeje.Common.SortAttribute.Get(System.Object)">
+            <summary>获得排序号
+            </summary>
+            <param name="enm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Zeje.Common.AutoDictGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDictGroup.DictTypeKey">
+            <summary>字典类型键
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDictGroup.DictTypeName">
+            <summary>字典类型名称
+            </summary>
+        </member>
+        <member name="T:Zeje.Common.AutoDict">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDict.DictTypeKey">
+            <summary>字典类型键
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDict.DictTypeName">
+            <summary>字典类型名称
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDict.DictKey">
+            <summary>字典项键
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDict.DictName">
+            <summary>字典项名称
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDict.DictValue">
+            <summary>字典项值
+            </summary>
+        </member>
+        <member name="P:Zeje.Common.AutoDict.DictOrder">
+            <summary>字典排序号
+            </summary>
+        </member>
+        <member name="T:Zeje.Common.AutoDictManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.AutoDictManager.strConnectionString">
+            <summary>数据库连接字符串
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.AutoDictManager.strDictSQL">
+            <summary>字典表数据
+            </summary>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.GetConnection">
+            <summary>获得数据连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.ReleaseConnection(System.Data.SqlClient.SqlConnection)">
+            <summary>释放连接
+            </summary>
+            <param name="con"></param>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.GetDictData">
+            <summary>DataTable形式返回字典数据
+            </summary>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.GetList">
+            <summary>List形式返回字典数据
+            </summary>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.GetlstGroup(System.Collections.Generic.List{Zeje.Common.AutoDict})">
+            <summary>以类型分组形式返回字典数据
+            </summary>
+            <param name="lst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.GetDictTypeName(System.Collections.Generic.List{Zeje.Common.AutoDict},System.String)">
+            <summary>获得字典类型名称
+            </summary>
+            <param name="lst"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Zeje.Common.AutoDictManager.Show">
+            <summary>输出结果
+            </summary>
+        </member>
+        <member name="T:Zeje.Common.SysApp">
+            <summary>应用
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.SysApp.Admin">
+            <summary>后台:1
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.SysApp.Blog">
+            <summary>博客:2
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.SysApp.Hr">
+            <summary>人事:3
+            </summary>
+        </member>
+        <member name="T:Zeje.Common.EConfig">
+            <summary>config key枚举
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.EConfig.TicketVersion">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.EConfig.WebSiteDomain">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Zeje.Common.ECookie">
+            <summary>Cookie key枚举
+            </summary>
+        </member>
+        <member name="F:Zeje.Common.ECookie.AuthCookieName">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>

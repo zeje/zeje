@@ -1,0 +1,28 @@
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje\bin\Debug\Zeje.dll
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje\bin\Debug\Zeje.pdb
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje\obj\Debug\Zeje.dll
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje\obj\Debug\Zeje.pdb
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\Zeje.dll
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\Zeje.pdb
+E:\JCProject\Projects\Zeje\Zeje\obj\Debug\Zeje.dll
+E:\JCProject\Projects\Zeje\Zeje\obj\Debug\Zeje.pdb
+E:\JCProject\Projects\Zeje\Zeje\obj\Debug\Zeje.csprojResolveAssemblyReference.cache
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\Zeje.dll.config
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\EntityFramework.dll
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\EntityFramework.Extended.dll
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\EntityFramework.SqlServer.dll
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\EntityFramework.xml
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\EntityFramework.Extended.xml
+E:\JCProject\Projects\Zeje\Zeje\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyVS\Zeje\Zeje\bin\Debug\Zeje.dll.config
+F:\MyVS\Zeje\Zeje\bin\Debug\Zeje.dll
+F:\MyVS\Zeje\Zeje\bin\Debug\Zeje.pdb
+F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.dll
+F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.Extended.dll
+F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.SqlServer.dll
+F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.xml
+F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.Extended.xml
+F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyVS\Zeje\Zeje\obj\Debug\Zeje.dll
+F:\MyVS\Zeje\Zeje\obj\Debug\Zeje.pdb
+F:\MyVS\Zeje\Zeje\obj\Debug\Zeje.csprojResolveAssemblyReference.cache

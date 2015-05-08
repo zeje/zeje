@@ -1,0 +1,15 @@
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.SSO.dll
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.SSO.pdb
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Newtonsoft.Json.dll
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.Utils.dll
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.dll
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.Utils.pdb
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Newtonsoft.Json.xml
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.pdb
+F:\MyVS\Zeje\Zeje.SSO\obj\Debug\Zeje.SSO.csprojResolveAssemblyReference.cache
+F:\MyVS\Zeje\Zeje.SSO\obj\Debug\Zeje.SSO.dll
+F:\MyVS\Zeje\Zeje.SSO\obj\Debug\Zeje.SSO.pdb
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.Common.dll
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.Common.pdb
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.Common.xml
+F:\MyVS\Zeje\Zeje.SSO\bin\Debug\Zeje.Utils.xml

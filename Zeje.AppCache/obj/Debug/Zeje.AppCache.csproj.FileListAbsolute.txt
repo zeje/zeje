@@ -1,0 +1,5 @@
+F:\MyVS\Zeje\Zeje.AppCache\bin\Debug\Zeje.AppCache.dll
+F:\MyVS\Zeje\Zeje.AppCache\bin\Debug\Zeje.AppCache.pdb
+F:\MyVS\Zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.dll
+F:\MyVS\Zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.pdb
+F:\MyVS\Zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.csprojResolveAssemblyReference.cache

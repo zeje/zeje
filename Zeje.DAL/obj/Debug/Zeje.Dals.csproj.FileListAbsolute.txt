@@ -1,0 +1,15 @@
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje.Dals\bin\Debug\Zeje.Dals.dll
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje.Dals\bin\Debug\Zeje.Dals.pdb
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje.Dals\obj\Debug\Zeje.Dals.dll
+C:\Users\泽智\Documents\Visual Studio 2013\Projects\Zeje\Zeje.Dals\obj\Debug\Zeje.Dals.pdb
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\Zeje.Dals.dll
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\Zeje.Dals.pdb
+E:\JCProject\Projects\Zeje\Zeje.Dals\obj\Debug\Zeje.Dals.dll
+E:\JCProject\Projects\Zeje\Zeje.Dals\obj\Debug\Zeje.Dals.pdb
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\Zeje.Dals.dll.config
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\EntityFramework.dll
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\EntityFramework.Extended.dll
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\EntityFramework.SqlServer.dll
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\EntityFramework.xml
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\EntityFramework.Extended.xml
+E:\JCProject\Projects\Zeje\Zeje.Dals\bin\Debug\EntityFramework.SqlServer.xml

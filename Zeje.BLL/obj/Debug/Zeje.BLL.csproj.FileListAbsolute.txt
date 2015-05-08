@@ -1,0 +1,12 @@
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\Zeje.BLL.dll.config
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\Zeje.BLL.dll
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\Zeje.BLL.pdb
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\EntityFramework.dll
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\EntityFramework.Extended.dll
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\EntityFramework.SqlServer.dll
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\EntityFramework.xml
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\EntityFramework.Extended.xml
+F:\MyVS\Zeje\Zeje.BLL\bin\Debug\EntityFramework.SqlServer.xml
+F:\MyVS\Zeje\Zeje.BLL\obj\Debug\Zeje.BLL.csprojResolveAssemblyReference.cache
+F:\MyVS\Zeje\Zeje.BLL\obj\Debug\Zeje.BLL.dll
+F:\MyVS\Zeje\Zeje.BLL\obj\Debug\Zeje.BLL.pdb
