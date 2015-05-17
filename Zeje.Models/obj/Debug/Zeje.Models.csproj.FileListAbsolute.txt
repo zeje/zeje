@@ -1,4 +1,0 @@
-F:\MyVS\Zeje\Zeje.Models\bin\Debug\Zeje.Models.dll
-F:\MyVS\Zeje\Zeje.Models\bin\Debug\Zeje.Models.pdb
-F:\MyVS\Zeje\Zeje.Models\obj\Debug\Zeje.Models.dll
-F:\MyVS\Zeje\Zeje.Models\obj\Debug\Zeje.Models.pdb

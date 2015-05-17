@@ -122,17 +122,6 @@ namespace Zeje.Utils
             }
             return str.Substring(startIndex, length);
         }
-
-        /// <summary>从字符串的开始位置截取到字符串指定位置
-        /// </summary>
-        /// <param name="str">原字符串</param>
-        /// <param name="length">字符串指定位置</param>
-        /// <returns>子字符串</returns>
-        public static string CutString0(string str, int length)
-        {
-            return str.Substring(0, length);
-        }
-
         /// <summary>从字符串的开始位置截取到字符串指定位置
         /// </summary>
         /// <param name="str">原字符串</param>
@@ -150,9 +139,7 @@ namespace Zeje.Utils
                 return str;
             }
         }
-
-        /// <summary>
-        /// 从字符串的指定位置开始截取到字符串结尾的了符串
+        /// <summary>从字符串的指定位置开始截取到字符串结尾的了符串
         /// </summary>
         /// <param name="str">原字符串</param>
         /// <param name="startIndex">子字符串的起始位置</param>
@@ -161,10 +148,7 @@ namespace Zeje.Utils
         {
             return CutString(str, startIndex, str.Length);
         }
-
-
-        /// <summary>
-        /// 分割字符串
+        /// <summary>分割字符串
         /// </summary>
         public static string[] SplitString(string strContent, string strSplit)
         {
@@ -175,11 +159,7 @@ namespace Zeje.Utils
             }
             return Regex.Split(strContent, Regex.Escape(strSplit), RegexOptions.IgnoreCase);
         }
-
-
-
-        /// <summary>
-        /// 返回 HTML 字符串的编码结果
+        /// <summary>返回 HTML 字符串的编码结果
         /// </summary>
         /// <param name="str">字符串</param>
         /// <returns>编码结果</returns>
@@ -189,9 +169,7 @@ namespace Zeje.Utils
                 return null;
             return str.Replace(" ", "&nbsp;").Replace("\r\n", "<br />");
         }
-
-        /// <summary>
-        /// 返回 HTML 字符串的解码结果
+        /// <summary>返回 HTML 字符串的解码结果
         /// </summary>
         /// <param name="str">字符串</param>
         /// <returns>解码结果</returns>
@@ -201,9 +179,7 @@ namespace Zeje.Utils
                 return null;
             return str.Replace("&nbsp;", " ").Replace("<br />", "\r\n");
         }
-
-        /// <summary>
-        /// 返回 URL 字符串的编码结果
+        /// <summary>返回 URL 字符串的编码结果
         /// </summary>
         /// <param name="str">字符串</param>
         /// <returns>编码结果</returns>
@@ -211,9 +187,7 @@ namespace Zeje.Utils
         {
             return HttpUtility.UrlEncode(str);
         }
-
-        /// <summary>
-        /// 返回 URL 字符串的编码结果
+        /// <summary>返回 URL 字符串的编码结果
         /// </summary>
         /// <param name="str">字符串</param>
         /// <returns>解码结果</returns>
@@ -221,9 +195,7 @@ namespace Zeje.Utils
         {
             return HttpUtility.UrlDecode(str);
         }
-
-        /// <summary>
-        /// 删除最后一个字符
+        /// <summary>删除最后一个字符
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -234,7 +206,6 @@ namespace Zeje.Utils
             else
                 return str.Substring(0, str.Length - 1);
         }
-
         /// <summary>获得拼音
         /// </summary>
         /// <param name="strText"></param>
@@ -275,7 +246,6 @@ namespace Zeje.Utils
             }
             else return cnChar;
         }
-
         /// <summary>字符串如果操过指定长度则将超出的部分用指定字符串代替
         /// </summary>
         /// <param name="p_SrcString">要检查的字符串</param>
@@ -286,8 +256,6 @@ namespace Zeje.Utils
         {
             return GetSubString(p_SrcString, 0, p_Length, p_TailString);
         }
-
-
         /// <summary>
         /// 取指定长度的字符串
         /// </summary>

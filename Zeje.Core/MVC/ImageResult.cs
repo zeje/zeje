@@ -34,11 +34,16 @@ namespace Zeje.Core
             context.HttpContext.Response.OutputStream.Write(byteStream, 0, byteStream.Count());
         }
 
-        //public ActionResult ProductShow(int PictureID)
-        //{
-        //    return new ImageResult() {
-        //        byteStream = PictureRepository.Get(PictureID) .ImageOriginal;
-        //    };
-        //}
+        /// <summary>Demo
+        /// </summary>
+        /// <param name="PictureID"></param>
+        /// <returns></returns>
+        private ActionResult Show(int PictureID)
+        {
+            return new ImageResult()
+            {
+                byteStream = null
+            };
+        }
     }
 }

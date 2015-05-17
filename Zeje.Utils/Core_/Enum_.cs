@@ -43,7 +43,7 @@ namespace Zeje.Utils
         /// <summary>将枚举以List的形式返回
         /// </summary>
         /// <typeparam name="TEnum"></typeparam>
-        /// <param name="control"></param>
+        /// <returns></returns>
         public static List<KeyValuePair<int, string>> GetList<TEnum>() where TEnum : struct
         {
             List<KeyValuePair<int, string>> lst = new List<KeyValuePair<int, string>>();

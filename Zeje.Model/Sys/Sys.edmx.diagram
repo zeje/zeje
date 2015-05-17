@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fcff53803d2a454aa26d005d2a58daae" Name="Diagram1">
+        <EntityTypeShape EntityType="SysModel.AppDict" Width="1.5" PointX="10.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.AppLog4net" Width="1.5" PointX="12.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrOrg" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrOrgHAuthority" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrOrgHStaff" Width="1.5" PointX="13" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrOrgVOrg" Width="1.5" PointX="12.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrOrgVStaff" Width="1.5" PointX="16" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrPosition" Width="1.5" PointX="8" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrPositionLevel" Width="1.5" PointX="5.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.HrStaff" Width="1.5" PointX="10.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysAuthority" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysFunction" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysOperation" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysRole" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysRoleHAuthority" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysRoleHUser" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SysModel.SysUser" Width="1.5" PointX="6" PointY="15" IsExpanded="true" />
+        <AssociationConnector Association="SysModel.FK_HrOrgHAuthority_HrOrg" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrOrgHStaff_HrOrg" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrOrgVStaff_HrOrg" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrOrgHAuthority_SysAuthority" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrOrgHStaff_HrStaff" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrOrgVStaff_HrStaff" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrPosition_HrPositionLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_HrPositionLevel_HrPositionLevel" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_SysAuthority_SysFunction" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_SysAuthority_SysOperation" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_SysRoleHAuthority_SysAuthority" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_SysRoleHAuthority_SysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_SysRoleHUser_SysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="SysModel.FK_SysRoleHUser_SysUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

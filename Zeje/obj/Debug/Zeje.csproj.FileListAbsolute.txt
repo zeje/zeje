@@ -26,3 +26,15 @@ F:\MyVS\Zeje\Zeje\bin\Debug\EntityFramework.SqlServer.xml
 F:\MyVS\Zeje\Zeje\obj\Debug\Zeje.dll
 F:\MyVS\Zeje\Zeje\obj\Debug\Zeje.pdb
 F:\MyVS\Zeje\Zeje\obj\Debug\Zeje.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\Zeje.dll.config
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\Zeje.dll
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\Zeje.pdb
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\EntityFramework.Extended.dll
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\EntityFramework.Extended.xml
+D:\Documents\GitHub\zeje\Zeje\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\zeje\Zeje\obj\Debug\Zeje.dll
+D:\Documents\GitHub\zeje\Zeje\obj\Debug\Zeje.pdb
+D:\Documents\GitHub\zeje\Zeje\obj\Debug\Zeje.csprojResolveAssemblyReference.cache

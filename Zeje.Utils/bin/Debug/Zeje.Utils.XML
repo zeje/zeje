@@ -118,7 +118,7 @@
             <summary>将枚举以List的形式返回
             </summary>
             <typeparam name="TEnum"></typeparam>
-            <param name="control"></param>
+            <returns></returns>
         </member>
         <member name="T:Zeje.Utils.Http_">
             <summary>WEB请求上下文信息工具类
@@ -700,13 +700,6 @@
             <param name="length">子字符串的长度</param>
             <returns>子字符串</returns>
         </member>
-        <member name="M:Zeje.Utils.String_.CutString0(System.String,System.Int32)">
-            <summary>从字符串的开始位置截取到字符串指定位置
-            </summary>
-            <param name="str">原字符串</param>
-            <param name="length">字符串指定位置</param>
-            <returns>子字符串</returns>
-        </member>
         <member name="M:Zeje.Utils.String_.CutString(System.String,System.Int32,System.String)">
             <summary>从字符串的开始位置截取到字符串指定位置
             </summary>
@@ -716,49 +709,42 @@
             <returns>子字符串</returns>
         </member>
         <member name="M:Zeje.Utils.String_.CutString(System.String,System.Int32)">
-            <summary>
-            从字符串的指定位置开始截取到字符串结尾的了符串
+            <summary>从字符串的指定位置开始截取到字符串结尾的了符串
             </summary>
             <param name="str">原字符串</param>
             <param name="startIndex">子字符串的起始位置</param>
             <returns>子字符串</returns>
         </member>
         <member name="M:Zeje.Utils.String_.SplitString(System.String,System.String)">
-            <summary>
-            分割字符串
+            <summary>分割字符串
             </summary>
         </member>
         <member name="M:Zeje.Utils.String_.HtmlEncode(System.String)">
-            <summary>
-            返回 HTML 字符串的编码结果
+            <summary>返回 HTML 字符串的编码结果
             </summary>
             <param name="str">字符串</param>
             <returns>编码结果</returns>
         </member>
         <member name="M:Zeje.Utils.String_.HtmlDecode(System.String)">
-            <summary>
-            返回 HTML 字符串的解码结果
+            <summary>返回 HTML 字符串的解码结果
             </summary>
             <param name="str">字符串</param>
             <returns>解码结果</returns>
         </member>
         <member name="M:Zeje.Utils.String_.UrlEncode(System.String)">
-            <summary>
-            返回 URL 字符串的编码结果
+            <summary>返回 URL 字符串的编码结果
             </summary>
             <param name="str">字符串</param>
             <returns>编码结果</returns>
         </member>
         <member name="M:Zeje.Utils.String_.UrlDecode(System.String)">
-            <summary>
-            返回 URL 字符串的编码结果
+            <summary>返回 URL 字符串的编码结果
             </summary>
             <param name="str">字符串</param>
             <returns>解码结果</returns>
         </member>
         <member name="M:Zeje.Utils.String_.ClearLastChar(System.String)">
-            <summary>
-            删除最后一个字符
+            <summary>删除最后一个字符
             </summary>
             <param name="str"></param>
             <returns></returns>

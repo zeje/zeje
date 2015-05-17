@@ -24,6 +24,10 @@ namespace Zeje
         {
             base.Add(GetExceptionMessage(ex));
         }
+        /// <summary>添加异常信息
+        /// </summary>
+        /// <param name="errorPrex">前缀</param>
+        /// <param name="ex"></param>
         public void Add(string errorPrex, Exception ex)
         {
             base.Add(errorPrex + GetExceptionMessage(ex));
@@ -52,32 +56,19 @@ namespace Zeje
             }
             return str;
         }
+        /// <summary>转换为以换行隔开的字符串
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            string returnValue = string.Empty;
-            if (this.Count > 0)
-            {
-                this.All(msg =>
-                {
-                    returnValue += msg + Environment.NewLine;
-                    return true;
-                });
-            }
-            return returnValue;
+            return this.Count > 0 ? string.Join(Environment.NewLine, this) : "";
         }
+        /// <summary>转换<br/>以换行隔开的字符串
+        /// </summary>
+        /// <returns></returns>
         public string ToAlertString()
         {
-            string returnValue = string.Empty;
-            if (this.Count > 0)
-            {
-
-                this.All(msg =>
-                {
-                    returnValue += msg + "<br/>";
-                    return true;
-                });
-            }
-            return returnValue;
+            return this.Count > 0 ? string.Join("<br/>", this) : "";
         }
     }
 }

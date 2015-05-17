@@ -11,3 +11,16 @@ F:\MyVS\Zeje\Zeje.Commons\obj\Debug\Zeje.Common.dll
 F:\MyVS\Zeje\Zeje.Commons\obj\Debug\Zeje.Common.pdb
 F:\MyVS\Zeje\Zeje.Commons\bin\Debug\Zeje.Common.XML
 F:\MyVS\Zeje\Zeje.Commons\obj\Debug\Zeje.Common.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\Zeje.Common.dll.config
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\Zeje.Common.XML
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\Zeje.Common.dll
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\Zeje.Common.pdb
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\EntityFramework.Extended.dll
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\EntityFramework.Extended.xml
+D:\Documents\GitHub\zeje\Zeje.Commons\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\zeje\Zeje.Commons\obj\Debug\Zeje.Common.dll
+D:\Documents\GitHub\zeje\Zeje.Commons\obj\Debug\Zeje.Common.pdb
+D:\Documents\GitHub\zeje\Zeje.Commons\obj\Debug\Zeje.Common.csprojResolveAssemblyReference.cache
