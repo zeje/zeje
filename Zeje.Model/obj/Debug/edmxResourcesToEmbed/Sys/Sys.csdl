@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AppDict">
+    <Key>
+      <PropertyRef Name="DictTypeKey" />
+      <PropertyRef Name="DictKey" />
+    </Key>
+    <Property Name="DictTypeKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DictTypeName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DictKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DictName" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DictValue" Type="Int32" />
+    <Property Name="DictOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="AppLog4net">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Thread" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Logger" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Exception" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="AppId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HrOrg">
+    <Key>
+      <PropertyRef Name="OrgCode" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrgCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrgName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ParentCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OrgTree" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrOrgHAuthority" Relationship="Self.FK_HrOrgHAuthority_HrOrg" FromRole="HrOrg" ToRole="HrOrgHAuthority" />
+    <NavigationProperty Name="HrOrgHStaff" Relationship="Self.FK_HrOrgHStaff_HrOrg" FromRole="HrOrg" ToRole="HrOrgHStaff" />
+    <NavigationProperty Name="HrOrgVStaff" Relationship="Self.FK_HrOrgVStaff_HrOrg" FromRole="HrOrg" ToRole="HrOrgVStaff" />
+  </EntityType>
+  <EntityType Name="HrOrgHAuthority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrgCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SysAuthorityId" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrOrg" Relationship="Self.FK_HrOrgHAuthority_HrOrg" FromRole="HrOrgHAuthority" ToRole="HrOrg" />
+    <NavigationProperty Name="SysAuthority" Relationship="Self.FK_HrOrgHAuthority_SysAuthority" FromRole="HrOrgHAuthority" ToRole="SysAuthority" />
+  </EntityType>
+  <EntityType Name="HrOrgHStaff">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HrOrgCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HrStaffCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrOrg" Relationship="Self.FK_HrOrgHStaff_HrOrg" FromRole="HrOrgHStaff" ToRole="HrOrg" />
+    <NavigationProperty Name="HrStaff" Relationship="Self.FK_HrOrgHStaff_HrStaff" FromRole="HrOrgHStaff" ToRole="HrStaff" />
+  </EntityType>
+  <EntityType Name="HrOrgVOrg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HrOrgCode1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HrOrgCode2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="HrOrgVStaff">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HrOrgCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HrStaffCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrOrg" Relationship="Self.FK_HrOrgVStaff_HrOrg" FromRole="HrOrgVStaff" ToRole="HrOrg" />
+    <NavigationProperty Name="HrStaff" Relationship="Self.FK_HrOrgVStaff_HrStaff" FromRole="HrOrgVStaff" ToRole="HrStaff" />
+  </EntityType>
+  <EntityType Name="HrPosition">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="SortId" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrPositionLevel" Relationship="Self.FK_HrPosition_HrPositionLevel" FromRole="HrPosition" ToRole="HrPositionLevel" />
+  </EntityType>
+  <EntityType Name="HrPositionLevel">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ParentCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SortId" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrPosition" Relationship="Self.FK_HrPosition_HrPositionLevel" FromRole="HrPositionLevel" ToRole="HrPosition" />
+    <NavigationProperty Name="HrPositionLevel1" Relationship="Self.FK_HrPositionLevel_HrPositionLevel" FromRole="HrPositionLevel" ToRole="HrPositionLevel1" />
+    <NavigationProperty Name="HrPositionLevel2" Relationship="Self.FK_HrPositionLevel_HrPositionLevel" FromRole="HrPositionLevel1" ToRole="HrPositionLevel" />
+  </EntityType>
+  <EntityType Name="HrStaff">
+    <Key>
+      <PropertyRef Name="StaffCode" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StaffCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PositionLevelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PositionCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsVisual" Type="Boolean" Nullable="false" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrOrgHStaff" Relationship="Self.FK_HrOrgHStaff_HrStaff" FromRole="HrStaff" ToRole="HrOrgHStaff" />
+    <NavigationProperty Name="HrOrgVStaff" Relationship="Self.FK_HrOrgVStaff_HrStaff" FromRole="HrStaff" ToRole="HrOrgVStaff" />
+  </EntityType>
+  <EntityType Name="SysAuthority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FunctionId" Type="Int32" Nullable="false" />
+    <Property Name="OperationId" Type="Int32" Nullable="false" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HrOrgHAuthority" Relationship="Self.FK_HrOrgHAuthority_SysAuthority" FromRole="SysAuthority" ToRole="HrOrgHAuthority" />
+    <NavigationProperty Name="SysFunction" Relationship="Self.FK_SysAuthority_SysFunction" FromRole="SysAuthority" ToRole="SysFunction" />
+    <NavigationProperty Name="SysOperation" Relationship="Self.FK_SysAuthority_SysOperation" FromRole="SysAuthority" ToRole="SysOperation" />
+    <NavigationProperty Name="SysRoleHAuthority" Relationship="Self.FK_SysRoleHAuthority_SysAuthority" FromRole="SysAuthority" ToRole="SysRoleHAuthority" />
+  </EntityType>
+  <EntityType Name="SysFunction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Controller" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Action" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Iconic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MenuTree" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SysAuthority" Relationship="Self.FK_SysAuthority_SysFunction" FromRole="SysFunction" ToRole="SysAuthority" />
+  </EntityType>
+  <EntityType Name="SysOperation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="C_Key" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SysAuthority" Relationship="Self.FK_SysAuthority_SysOperation" FromRole="SysOperation" ToRole="SysAuthority" />
+  </EntityType>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SysRoleHAuthority" Relationship="Self.FK_SysRoleHAuthority_SysRole" FromRole="SysRole" ToRole="SysRoleHAuthority" />
+    <NavigationProperty Name="SysRoleHUser" Relationship="Self.FK_SysRoleHUser_SysRole" FromRole="SysRole" ToRole="SysRoleHUser" />
+  </EntityType>
+  <EntityType Name="SysRoleHAuthority">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SysRoleId" Type="Int32" />
+    <Property Name="SysAuthorityId" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SysAuthority" Relationship="Self.FK_SysRoleHAuthority_SysAuthority" FromRole="SysRoleHAuthority" ToRole="SysAuthority" />
+    <NavigationProperty Name="SysRole" Relationship="Self.FK_SysRoleHAuthority_SysRole" FromRole="SysRoleHAuthority" ToRole="SysRole" />
+  </EntityType>
+  <EntityType Name="SysRoleHUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SysRoleId" Type="Int32" />
+    <Property Name="SysUserId" Type="Int32" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SysRole" Relationship="Self.FK_SysRoleHUser_SysRole" FromRole="SysRoleHUser" ToRole="SysRole" />
+    <NavigationProperty Name="SysUser" Relationship="Self.FK_SysRoleHUser_SysUser" FromRole="SysRoleHUser" ToRole="SysUser" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="AddPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DeletePerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SysRoleHUser" Relationship="Self.FK_SysRoleHUser_SysUser" FromRole="SysUser" ToRole="SysRoleHUser" />
+  </EntityType>
+  <Association Name="FK_HrOrgHAuthority_HrOrg">
+    <End Role="HrOrg" Type="Self.HrOrg" Multiplicity="0..1" />
+    <End Role="HrOrgHAuthority" Type="Self.HrOrgHAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrOrg">
+        <PropertyRef Name="OrgCode" />
+      </Principal>
+      <Dependent Role="HrOrgHAuthority">
+        <PropertyRef Name="OrgCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrOrgHStaff_HrOrg">
+    <End Role="HrOrg" Type="Self.HrOrg" Multiplicity="1" />
+    <End Role="HrOrgHStaff" Type="Self.HrOrgHStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrOrg">
+        <PropertyRef Name="OrgCode" />
+      </Principal>
+      <Dependent Role="HrOrgHStaff">
+        <PropertyRef Name="HrOrgCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrOrgVStaff_HrOrg">
+    <End Role="HrOrg" Type="Self.HrOrg" Multiplicity="0..1" />
+    <End Role="HrOrgVStaff" Type="Self.HrOrgVStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrOrg">
+        <PropertyRef Name="OrgCode" />
+      </Principal>
+      <Dependent Role="HrOrgVStaff">
+        <PropertyRef Name="HrOrgCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrOrgHAuthority_SysAuthority">
+    <End Role="SysAuthority" Type="Self.SysAuthority" Multiplicity="0..1" />
+    <End Role="HrOrgHAuthority" Type="Self.HrOrgHAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysAuthority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HrOrgHAuthority">
+        <PropertyRef Name="SysAuthorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrOrgHStaff_HrStaff">
+    <End Role="HrStaff" Type="Self.HrStaff" Multiplicity="1" />
+    <End Role="HrOrgHStaff" Type="Self.HrOrgHStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrStaff">
+        <PropertyRef Name="StaffCode" />
+      </Principal>
+      <Dependent Role="HrOrgHStaff">
+        <PropertyRef Name="HrStaffCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrOrgVStaff_HrStaff">
+    <End Role="HrStaff" Type="Self.HrStaff" Multiplicity="0..1" />
+    <End Role="HrOrgVStaff" Type="Self.HrOrgVStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrStaff">
+        <PropertyRef Name="StaffCode" />
+      </Principal>
+      <Dependent Role="HrOrgVStaff">
+        <PropertyRef Name="HrStaffCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrPosition_HrPositionLevel">
+    <End Role="HrPositionLevel" Type="Self.HrPositionLevel" Multiplicity="1" />
+    <End Role="HrPosition" Type="Self.HrPosition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrPositionLevel">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="HrPosition">
+        <PropertyRef Name="LevelCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HrPositionLevel_HrPositionLevel">
+    <End Role="HrPositionLevel" Type="Self.HrPositionLevel" Multiplicity="0..1" />
+    <End Role="HrPositionLevel1" Type="Self.HrPositionLevel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HrPositionLevel">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="HrPositionLevel1">
+        <PropertyRef Name="ParentCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysAuthority_SysFunction">
+    <End Role="SysFunction" Type="Self.SysFunction" Multiplicity="1" />
+    <End Role="SysAuthority" Type="Self.SysAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysFunction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysAuthority">
+        <PropertyRef Name="FunctionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysAuthority_SysOperation">
+    <End Role="SysOperation" Type="Self.SysOperation" Multiplicity="1" />
+    <End Role="SysAuthority" Type="Self.SysAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysOperation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysAuthority">
+        <PropertyRef Name="OperationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleHAuthority_SysAuthority">
+    <End Role="SysAuthority" Type="Self.SysAuthority" Multiplicity="0..1" />
+    <End Role="SysRoleHAuthority" Type="Self.SysRoleHAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysAuthority">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleHAuthority">
+        <PropertyRef Name="SysAuthorityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleHAuthority_SysRole">
+    <End Role="SysRole" Type="Self.SysRole" Multiplicity="0..1" />
+    <End Role="SysRoleHAuthority" Type="Self.SysRoleHAuthority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleHAuthority">
+        <PropertyRef Name="SysRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleHUser_SysRole">
+    <End Role="SysRole" Type="Self.SysRole" Multiplicity="0..1" />
+    <End Role="SysRoleHUser" Type="Self.SysRoleHUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleHUser">
+        <PropertyRef Name="SysRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleHUser_SysUser">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+    <End Role="SysRoleHUser" Type="Self.SysRoleHUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleHUser">
+        <PropertyRef Name="SysUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SysEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppDict" EntityType="Self.AppDict" />
+    <EntitySet Name="AppLog4net" EntityType="Self.AppLog4net" />
+    <EntitySet Name="HrOrg" EntityType="Self.HrOrg" />
+    <EntitySet Name="HrOrgHAuthority" EntityType="Self.HrOrgHAuthority" />
+    <EntitySet Name="HrOrgHStaff" EntityType="Self.HrOrgHStaff" />
+    <EntitySet Name="HrOrgVOrg" EntityType="Self.HrOrgVOrg" />
+    <EntitySet Name="HrOrgVStaff" EntityType="Self.HrOrgVStaff" />
+    <EntitySet Name="HrPosition" EntityType="Self.HrPosition" />
+    <EntitySet Name="HrPositionLevel" EntityType="Self.HrPositionLevel" />
+    <EntitySet Name="HrStaff" EntityType="Self.HrStaff" />
+    <EntitySet Name="SysAuthority" EntityType="Self.SysAuthority" />
+    <EntitySet Name="SysFunction" EntityType="Self.SysFunction" />
+    <EntitySet Name="SysOperation" EntityType="Self.SysOperation" />
+    <EntitySet Name="SysRole" EntityType="Self.SysRole" />
+    <EntitySet Name="SysRoleHAuthority" EntityType="Self.SysRoleHAuthority" />
+    <EntitySet Name="SysRoleHUser" EntityType="Self.SysRoleHUser" />
+    <EntitySet Name="SysUser" EntityType="Self.SysUser" />
+    <AssociationSet Name="FK_HrOrgHAuthority_HrOrg" Association="Self.FK_HrOrgHAuthority_HrOrg">
+      <End Role="HrOrg" EntitySet="HrOrg" />
+      <End Role="HrOrgHAuthority" EntitySet="HrOrgHAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrOrgHStaff_HrOrg" Association="Self.FK_HrOrgHStaff_HrOrg">
+      <End Role="HrOrg" EntitySet="HrOrg" />
+      <End Role="HrOrgHStaff" EntitySet="HrOrgHStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrOrgVStaff_HrOrg" Association="Self.FK_HrOrgVStaff_HrOrg">
+      <End Role="HrOrg" EntitySet="HrOrg" />
+      <End Role="HrOrgVStaff" EntitySet="HrOrgVStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrOrgHAuthority_SysAuthority" Association="Self.FK_HrOrgHAuthority_SysAuthority">
+      <End Role="SysAuthority" EntitySet="SysAuthority" />
+      <End Role="HrOrgHAuthority" EntitySet="HrOrgHAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrOrgHStaff_HrStaff" Association="Self.FK_HrOrgHStaff_HrStaff">
+      <End Role="HrStaff" EntitySet="HrStaff" />
+      <End Role="HrOrgHStaff" EntitySet="HrOrgHStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrOrgVStaff_HrStaff" Association="Self.FK_HrOrgVStaff_HrStaff">
+      <End Role="HrStaff" EntitySet="HrStaff" />
+      <End Role="HrOrgVStaff" EntitySet="HrOrgVStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrPosition_HrPositionLevel" Association="Self.FK_HrPosition_HrPositionLevel">
+      <End Role="HrPositionLevel" EntitySet="HrPositionLevel" />
+      <End Role="HrPosition" EntitySet="HrPosition" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HrPositionLevel_HrPositionLevel" Association="Self.FK_HrPositionLevel_HrPositionLevel">
+      <End Role="HrPositionLevel" EntitySet="HrPositionLevel" />
+      <End Role="HrPositionLevel1" EntitySet="HrPositionLevel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysAuthority_SysFunction" Association="Self.FK_SysAuthority_SysFunction">
+      <End Role="SysFunction" EntitySet="SysFunction" />
+      <End Role="SysAuthority" EntitySet="SysAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysAuthority_SysOperation" Association="Self.FK_SysAuthority_SysOperation">
+      <End Role="SysOperation" EntitySet="SysOperation" />
+      <End Role="SysAuthority" EntitySet="SysAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleHAuthority_SysAuthority" Association="Self.FK_SysRoleHAuthority_SysAuthority">
+      <End Role="SysAuthority" EntitySet="SysAuthority" />
+      <End Role="SysRoleHAuthority" EntitySet="SysRoleHAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleHAuthority_SysRole" Association="Self.FK_SysRoleHAuthority_SysRole">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRoleHAuthority" EntitySet="SysRoleHAuthority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleHUser_SysRole" Association="Self.FK_SysRoleHUser_SysRole">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRoleHUser" EntitySet="SysRoleHUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleHUser_SysUser" Association="Self.FK_SysRoleHUser_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="SysRoleHUser" EntitySet="SysRoleHUser" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

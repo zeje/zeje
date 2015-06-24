@@ -8,3 +8,8 @@ D:\Documents\GitHub\zeje\Zeje.AppCache\bin\Debug\Zeje.AppCache.pdb
 D:\Documents\GitHub\zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.dll
 D:\Documents\GitHub\zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.pdb
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.AppCache\bin\Debug\Zeje.AppCache.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.AppCache\bin\Debug\Zeje.AppCache.pdb
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.AppCache\obj\Debug\Zeje.AppCache.pdb

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\ErrorHandleType.cs" />
+    <Compile Include="Expression\Predicate_.cs" />
     <Compile Include="Logs\LogHelper.cs" />
     <Compile Include="Logs\LogReader.cs" />
     <Compile Include="MVC\DocumentResult.cs" />
@@ -71,6 +72,7 @@
       <Name>Zeje.Utils</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

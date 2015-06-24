@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +56,9 @@
       <DependentUpon>Sys.tt</DependentUpon>
     </Compile>
     <Compile Include="Sys\AppLog4net.cs">
+      <DependentUpon>Sys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\FileUploader.cs">
       <DependentUpon>Sys.tt</DependentUpon>
     </Compile>
     <Compile Include="Sys\HrOrg.cs">
@@ -99,10 +103,25 @@
     <Compile Include="Sys\SysAuthority.cs">
       <DependentUpon>Sys.tt</DependentUpon>
     </Compile>
+    <Compile Include="Sys\SysException.cs">
+      <DependentUpon>Sys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysField.cs">
+      <DependentUpon>Sys.tt</DependentUpon>
+    </Compile>
     <Compile Include="Sys\SysFunction.cs">
       <DependentUpon>Sys.tt</DependentUpon>
     </Compile>
+    <Compile Include="Sys\SysLog.cs">
+      <DependentUpon>Sys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysMenu.cs">
+      <DependentUpon>Sys.tt</DependentUpon>
+    </Compile>
     <Compile Include="Sys\SysOperation.cs">
+      <DependentUpon>Sys.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SysPerson.cs">
       <DependentUpon>Sys.tt</DependentUpon>
     </Compile>
     <Compile Include="Sys\SysRole.cs">
@@ -122,14 +141,12 @@
     <Folder Include="HR\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="Sys\Sys.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Sys.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="Sys\Sys.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Sys.edmx</DependentUpon>

@@ -49,12 +49,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DbContextFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zeje.Core\Zeje.Core.csproj">
+      <Project>{22880d8a-bade-42dd-8965-feb221c5fb65}</Project>
+      <Name>Zeje.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zeje.Model\Zeje.Model.csproj">
+      <Project>{f4db7c77-53ce-48ff-9980-efafb6924c40}</Project>
+      <Name>Zeje.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zeje.Utils\Zeje.Utils.csproj">
+      <Project>{78b9e987-d5d6-4c2e-b9d6-685b4728ccdf}</Project>
+      <Name>Zeje.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zeje\Zeje.csproj">
+      <Project>{0ff4358c-45b1-4e9c-aade-49a10482483d}</Project>
+      <Name>Zeje</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

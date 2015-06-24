@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SysModelStoreContainer" CdmEntityContainer="SysEntities">
+    <EntitySetMapping Name="AppDict">
+      <EntityTypeMapping TypeName="SysModel.AppDict">
+        <MappingFragment StoreEntitySet="AppDict">
+          <ScalarProperty Name="DictTypeKey" ColumnName="DictTypeKey" />
+          <ScalarProperty Name="DictTypeName" ColumnName="DictTypeName" />
+          <ScalarProperty Name="DictKey" ColumnName="DictKey" />
+          <ScalarProperty Name="DictName" ColumnName="DictName" />
+          <ScalarProperty Name="DictValue" ColumnName="DictValue" />
+          <ScalarProperty Name="DictOrder" ColumnName="DictOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppLog4net">
+      <EntityTypeMapping TypeName="SysModel.AppLog4net">
+        <MappingFragment StoreEntitySet="AppLog4net">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="Thread" ColumnName="Thread" />
+          <ScalarProperty Name="LogLevel" ColumnName="LogLevel" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrOrg">
+      <EntityTypeMapping TypeName="SysModel.HrOrg">
+        <MappingFragment StoreEntitySet="HrOrg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+          <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="OrgTree" ColumnName="OrgTree" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrOrgHAuthority">
+      <EntityTypeMapping TypeName="SysModel.HrOrgHAuthority">
+        <MappingFragment StoreEntitySet="HrOrgHAuthority">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+          <ScalarProperty Name="SysAuthorityId" ColumnName="SysAuthorityId" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrOrgHStaff">
+      <EntityTypeMapping TypeName="SysModel.HrOrgHStaff">
+        <MappingFragment StoreEntitySet="HrOrgHStaff">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HrOrgCode" ColumnName="HrOrgCode" />
+          <ScalarProperty Name="HrStaffCode" ColumnName="HrStaffCode" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrOrgVOrg">
+      <EntityTypeMapping TypeName="SysModel.HrOrgVOrg">
+        <MappingFragment StoreEntitySet="HrOrgVOrg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HrOrgCode1" ColumnName="HrOrgCode1" />
+          <ScalarProperty Name="HrOrgCode2" ColumnName="HrOrgCode2" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrOrgVStaff">
+      <EntityTypeMapping TypeName="SysModel.HrOrgVStaff">
+        <MappingFragment StoreEntitySet="HrOrgVStaff">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HrOrgCode" ColumnName="HrOrgCode" />
+          <ScalarProperty Name="HrStaffCode" ColumnName="HrStaffCode" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrPosition">
+      <EntityTypeMapping TypeName="SysModel.HrPosition">
+        <MappingFragment StoreEntitySet="HrPosition">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LevelCode" ColumnName="LevelCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SortId" ColumnName="SortId" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrPositionLevel">
+      <EntityTypeMapping TypeName="SysModel.HrPositionLevel">
+        <MappingFragment StoreEntitySet="HrPositionLevel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentCode" ColumnName="ParentCode" />
+          <ScalarProperty Name="SortId" ColumnName="SortId" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HrStaff">
+      <EntityTypeMapping TypeName="SysModel.HrStaff">
+        <MappingFragment StoreEntitySet="HrStaff">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StaffCode" ColumnName="StaffCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PositionLevelCode" ColumnName="PositionLevelCode" />
+          <ScalarProperty Name="PositionCode" ColumnName="PositionCode" />
+          <ScalarProperty Name="IsVisual" ColumnName="IsVisual" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysAuthority">
+      <EntityTypeMapping TypeName="SysModel.SysAuthority">
+        <MappingFragment StoreEntitySet="SysAuthority">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FunctionId" ColumnName="FunctionId" />
+          <ScalarProperty Name="OperationId" ColumnName="OperationId" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysFunction">
+      <EntityTypeMapping TypeName="SysModel.SysFunction">
+        <MappingFragment StoreEntitySet="SysFunction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Controller" ColumnName="Controller" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Iconic" ColumnName="Iconic" />
+          <ScalarProperty Name="MenuTree" ColumnName="MenuTree" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysOperation">
+      <EntityTypeMapping TypeName="SysModel.SysOperation">
+        <MappingFragment StoreEntitySet="SysOperation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="C_Key" ColumnName="_Key" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRole">
+      <EntityTypeMapping TypeName="SysModel.SysRole">
+        <MappingFragment StoreEntitySet="SysRole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRoleHAuthority">
+      <EntityTypeMapping TypeName="SysModel.SysRoleHAuthority">
+        <MappingFragment StoreEntitySet="SysRoleHAuthority">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SysRoleId" ColumnName="SysRoleId" />
+          <ScalarProperty Name="SysAuthorityId" ColumnName="SysAuthorityId" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRoleHUser">
+      <EntityTypeMapping TypeName="SysModel.SysRoleHUser">
+        <MappingFragment StoreEntitySet="SysRoleHUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SysRoleId" ColumnName="SysRoleId" />
+          <ScalarProperty Name="SysUserId" ColumnName="SysUserId" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysUser">
+      <EntityTypeMapping TypeName="SysModel.SysUser">
+        <MappingFragment StoreEntitySet="SysUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="AddPerson" ColumnName="AddPerson" />
+          <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+          <ScalarProperty Name="UpdatePerson" ColumnName="UpdatePerson" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="DeletePerson" ColumnName="DeletePerson" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,12 @@
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\Zeje.ViewModel.dll.config
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\Zeje.ViewModel.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\Zeje.ViewModel.pdb
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\EntityFramework.Extended.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\EntityFramework.Extended.xml
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\obj\Debug\Zeje.ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\obj\Debug\Zeje.ViewModel.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.ViewModel\obj\Debug\Zeje.ViewModel.pdb

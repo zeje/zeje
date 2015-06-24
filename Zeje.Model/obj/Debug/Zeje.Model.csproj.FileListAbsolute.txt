@@ -1,0 +1,3 @@
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.Model\obj\Debug\Zeje.Model.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.Model\obj\Debug\Zeje.Model.dll
+C:\Users\Administrator\Documents\GitHub\zeje\Zeje.Model\obj\Debug\Zeje.Model.pdb
